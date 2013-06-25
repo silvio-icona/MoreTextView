@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity" 
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:text="@string/hello_world" 
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hello_world" 
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:shadowColor="@color/light_font"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        />
+    
+    <com.example.moretextview.ReflectingLayout android:id="@+id/reflected"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+    	>
+    	
+	    <TextView android:id="@+id/mytext"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/hello_world"
+	        android:includeFontPadding="false"
+	        android:textSize="25sp"
+	        android:textColor="@android:color/white"
+	        android:gravity="bottom"
+	        android:background="@color/orange"
+	        />
+
+    </com.example.moretextview.ReflectingLayout>
+    
+    
+    <com.example.moretextview.ReflectingLayout android:id="@+id/reflectedplain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/reflected"
+    	>
+    	
+	    <TextView android:id="@+id/textbase"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/hello_world"
+	        android:textSize="25sp"
+	        android:textColor="@android:color/white"
+	        android:gravity="bottom"
+	        android:background="@color/orange"
+	        />
+
+    </com.example.moretextview.ReflectingLayout>
+    
+    <Button android:id="@+id/startreflection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="Reflect!"
+        android:textColor="@android:color/white"
+        />
+    
+</RelativeLayout>
